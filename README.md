@@ -3,6 +3,8 @@ ROUGE L metric implementation using tensorflow ops
 
 Can be used to compute Rouge L during training as a reinforment objective as described in https://arxiv.org/pdf/1705.04304.pdf, without switching to CPU. Significantly more efficient than using tf.py_func with a python Rouge L function.
 
+Function tf_rouge_l takes three arguments, a Tensor to evaluate, a Tensor to act as a reference, and an end id to truncate each sequence with. If the end id is not found within a sequence, the sequence is not truncated.
+
     import tensorflow as tf
     from rouge_l_tensorflow import tf_rouge_l
     
