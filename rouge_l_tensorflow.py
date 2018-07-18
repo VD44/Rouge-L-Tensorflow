@@ -1,6 +1,6 @@
 # The MIT License
 #
-# Copyright (c) "***USERNAME HERE***"
+# Copyright (c) VD44
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
