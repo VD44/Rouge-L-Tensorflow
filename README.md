@@ -1,7 +1,11 @@
 # Rouge-L-Tensorflow
-ROUGE L metric implementation using tensorflow ops
+ROUGE L metric implementation using tensorflow ops.
+
+ROUGE (Recall-Oriented Understudy for Gisting Evaluation) is specified in http://www.aclweb.org/anthology/W04-1013. It is often used as a method to automatically evaluate machine generated summeries.
 
 Can be used to compute Rouge L during training as a reinforment objective as described in https://arxiv.org/pdf/1705.04304.pdf, without switching to CPU. Significantly more efficient than using tf.py_func with a python Rouge L function.
+
+I decided to write this because I needed to use it to reinforce a summary model and I couldn't find an implementation that could be computed without switching to CPU. Hopefully somebody finds this useful.
 
 Function tf_rouge_l takes three arguments: a Tensor to evaluate, a Tensor to act as a reference, and an end id to truncate each sequence with. If the end id is not found within a sequence, the sequence is not truncated.
 
